@@ -1,6 +1,5 @@
 import os
 from datetime import date
-from dotenv import load_dotenv
 from django.contrib.auth.decorators import login_required
 from django.db.models import ForeignKey
 from flask import Flask, abort, render_template, redirect, url_for, flash
@@ -35,8 +34,6 @@ pip3 install -r requirements.txt
 
 This will install the packages from the requirements.txt for this project.
 '''
-
-load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
